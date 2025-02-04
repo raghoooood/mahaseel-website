@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { ourWork } from "@/utils/WorkCardData";
 import Image from "next/image";
@@ -21,14 +21,14 @@ const WorkDetail = () => {
 
   const allImages = [workItem.img, ...workItem.images]; // Combine main and gallery images without eval()
 
-  // Handle navigation
-  const showNextImage = () => {
+  // Memoize the functions using useCallback
+  const showNextImage = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % allImages.length);
-  };
+  }, [currentIndex]);  // Dependencies only include currentIndex
 
-  const showPrevImage = () => {
+  const showPrevImage = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + allImages.length) % allImages.length);
-  };
+  }, [currentIndex]);  // Dependencies only include currentIndex
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -39,11 +39,10 @@ const WorkDetail = () => {
         if (event.key === "Escape") setSelectedImage(null);
       }
     };
-  
+
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedImage, showNextImage, showPrevImage]); // Added missing dependencies
-  
+  }, [selectedImage, showNextImage, showPrevImage]); // Use updated dependencies
 
   return (
     <div className="container py-12 px-4 mx-auto">
