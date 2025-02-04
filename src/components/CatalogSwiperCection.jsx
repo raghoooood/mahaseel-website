@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link"; // Import Link for navigation
 import { TbArrowUpRight } from "react-icons/tb";
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
@@ -24,9 +25,9 @@ export default function CatalogSwiperSection() {
                         </div>
                         <div>
                             <p>showcasing the breadth and depth of our investments</p>
-                            <a href="" className="inline-flex items-center pt-4 text-lg font-bold text-black underline">
+                            <Link href="/work" className="inline-flex items-center pt-4 text-lg font-bold text-black underline">
                                 View Gallery <TbArrowUpRight />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

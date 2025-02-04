@@ -17,12 +17,9 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
-
-
-import {ourWork} from '@/utils/WorkCardData'
+import { ourWork } from "@/utils/WorkCardData";
 
 gsap.registerPlugin(ScrollTrigger);
-
 
 const ImageSlider = () => {
   const containerRef = useRef(null);
@@ -93,10 +90,10 @@ const ImageSlider = () => {
         <div
           key={item.id}
           ref={(el) => (sectionsRef.current[index] = el)}
-          className="flex flex-col md:flex-row items-center md:items-start gap-6 w-full max-w-5xl p-6 bg-white rounded-lg my-6"
+          className="flex flex-col sm:flex-row items-center sm:items-start gap-6 w-full max-w-5xl p-6 bg-white rounded-lg my-6"
         >
           {/* Image on the Left */}
-          <div className="w-full sm:w-3/4 md:w-1/2 flex justify-center md:justify-start">
+          <div className="w-full sm:w-3/4 md:w-1/2 flex justify-center sm:justify-start">
             <Image
               src={item.img}
               alt={item.title}
@@ -107,57 +104,57 @@ const ImageSlider = () => {
           </div>
 
           {/* Information on the Right */}
-          <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-xl md:text-2xl font-bold">{item.title}</h2>
+          <div className="w-full sm:w-1/2 text-center sm:text-left">
+            <h2 className="text-xl sm:text-2xl font-bold">{item.title}</h2>
             <p className="text-gray-600 mt-2">{item.description}</p>
 
             <div className="mt-4 text-gray-600">
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-2 justify-center sm:justify-start">
                 <FaMapMarkerAlt className="mr-2 text-lg" />
                 <p>
                   <strong>Address:</strong> {item.address}
                 </p>
               </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-2 justify-center sm:justify-start">
                 <FaBuilding className="mr-2 text-lg" />
                 <p>
                   <strong>Type:</strong> {item.type}
                 </p>
               </div>
-              <div className="flex items-center mb-2">
-                <FaCalendarAlt className="mr-2 text-lg" />
-                <p>
-                  <strong>Establishment Date:</strong> {item.establishmentDate}
-                </p>
-              </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-2 justify-center sm:justify-start">
                 <FaHome className="mr-2 text-lg" />
                 <p>
                   <strong>Area:</strong> {item.area}
                 </p>
               </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-2 justify-center sm:justify-start">
                 <FaChair className="mr-2 text-lg" />
                 <p>
                   <strong>Chairs:</strong> {item.chairs}
                 </p>
               </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-2 justify-center sm:justify-start">
                 <FaTable className="mr-2 text-lg" />
                 <p>
                   <strong>Tables:</strong> {item.tables}
                 </p>
               </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-2 justify-center sm:justify-start">
                 <FaUsers className="mr-2 text-lg" />
                 <p>
                   <strong>Employees:</strong> {item.numOfEmployees}
                 </p>
               </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-2 justify-center sm:justify-start">
                 <FaChartLine className="mr-2 text-lg" />
                 <p>
                   <strong>Avg Monthly Visits:</strong> {item.AvgMonthlyVisits}
+                </p>
+              </div>
+              <div className="flex items-center mb-2 justify-center sm:justify-start">
+                <FaCalendarAlt className="mr-2 text-lg" />
+                <p>
+                  <strong>Establishment Date:</strong> {item.establishmentDate}
                 </p>
               </div>
             </div>
