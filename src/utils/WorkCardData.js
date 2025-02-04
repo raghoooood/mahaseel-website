@@ -99,7 +99,7 @@ export const ourWork = [
     numOfEmployees: 6,
     AvgMonthlyVisits: 800,
     img: parkmycar,
-    link: "/parkmycar",
+    link: "/work/parkmycar",
   },
   {
     id: 7,
