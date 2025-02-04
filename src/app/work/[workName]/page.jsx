@@ -39,10 +39,11 @@ const WorkDetail = () => {
         if (event.key === "Escape") setSelectedImage(null);
       }
     };
-
+  
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedImage]);
+  }, [selectedImage, showNextImage, showPrevImage]); // Added missing dependencies
+  
 
   return (
     <div className="container py-12 px-4 mx-auto">
