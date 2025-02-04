@@ -14,21 +14,18 @@ const WorkDetail = () => {
   // Extract the workName from the pathname
   const workName = pathname?.split("/").pop()?.toLowerCase();
   const workItem = ourWork.find((item) => item.title.toLowerCase() === workName);
-
-  if (!workItem) {
-    return <p className="text-center text-xl">Work not found</p>;
-  }
-
-  const allImages = [workItem.img, ...workItem.images]; // Combine main and gallery images
+  
+  // Handle missing work item
+  const allImages = workItem ? [workItem.img, ...workItem.images] : [];
 
   // Memoize the functions using useCallback
   const showNextImage = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % allImages.length);
-  }, [allImages.length]);  // Include allImages.length in dependencies
+  }, [allImages.length]);
 
   const showPrevImage = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + allImages.length) % allImages.length);
-  }, [allImages.length]);  // Include allImages.length in dependencies
+  }, [allImages.length]);
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -42,7 +39,12 @@ const WorkDetail = () => {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedImage, showNextImage, showPrevImage]); // Use updated dependencies
+  }, [selectedImage, showNextImage, showPrevImage]);
+
+  // Render conditionally based on workItem
+  if (!workItem) {
+    return <p className="text-center text-xl">Work not found</p>;
+  }
 
   return (
     <div className="container py-12 px-4 mx-auto">
@@ -62,31 +64,29 @@ const WorkDetail = () => {
             setSelectedImage(workItem.img);
             setCurrentIndex(0);
           }}
-          width={600} // Set appropriate width
-          height={400} // Set appropriate height
+          width={600}
+          height={400}
         />
       </div>
 
       {/* Gallery of Additional Images */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-8">
-        {workItem.images.map((imageSrc, index) => {
-          return (
-            <div key={index} className="flex justify-center p-2">
-              <Image
-                src={imageSrc}
-                alt={`Image ${index + 1}`}
-                className="rounded-lg w-full h-auto max-w-xs md:max-w-md lg:max-w-lg transition-transform transform hover:scale-105 cursor-pointer"
-                style={{ objectFit: "cover" }}
-                onClick={() => {
-                  setSelectedImage(imageSrc);
-                  setCurrentIndex(index + 1);
-                }}
-                width={300} // Set appropriate width
-                height={200} // Set appropriate height
-              />
-            </div>
-          );
-        })}
+        {workItem.images.map((imageSrc, index) => (
+          <div key={index} className="flex justify-center p-2">
+            <Image
+              src={imageSrc}
+              alt={`Image ${index + 1}`}
+              className="rounded-lg w-full h-auto max-w-xs md:max-w-md lg:max-w-lg transition-transform transform hover:scale-105 cursor-pointer"
+              style={{ objectFit: "cover" }}
+              onClick={() => {
+                setSelectedImage(imageSrc);
+                setCurrentIndex(index + 1);
+              }}
+              width={300}
+              height={200}
+            />
+          </div>
+        ))}
       </div>
 
       {/* Overlay for Full-Screen Image Preview */}
@@ -109,8 +109,8 @@ const WorkDetail = () => {
               src={allImages[currentIndex]}
               alt="Selected Work Image"
               className="rounded-lg w-full h-auto max-h-[80vh] object-contain"
-              width={800} // Set appropriate width
-              height={600} // Set appropriate height
+              width={800}
+              height={600}
             />
 
             {/* Next Button */}
