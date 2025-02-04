@@ -19,16 +19,16 @@ const WorkDetail = () => {
     return <p className="text-center text-xl">Work not found</p>;
   }
 
-  const allImages = [workItem.img, ...workItem.images]; // Combine main and gallery images without eval()
+  const allImages = [workItem.img, ...workItem.images]; // Combine main and gallery images
 
   // Memoize the functions using useCallback
   const showNextImage = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % allImages.length);
-  }, [currentIndex]);  // Dependencies only include currentIndex
+  }, [allImages.length]);  // Include allImages.length in dependencies
 
   const showPrevImage = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + allImages.length) % allImages.length);
-  }, [currentIndex]);  // Dependencies only include currentIndex
+  }, [allImages.length]);  // Include allImages.length in dependencies
 
   // Handle keyboard navigation
   useEffect(() => {
