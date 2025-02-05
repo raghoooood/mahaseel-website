@@ -3,8 +3,8 @@ import "./globals.css";
 
 export const metadata = {
   title: {
-    template: "creative_studio",
-    default: "Studio - A feature to make you famous",
+    template: "mahaseel",
+    default: "mahaseel - Investing in businesses that shape tomorrow",
   },
 };
 
