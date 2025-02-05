@@ -105,7 +105,7 @@ const ImageSlider = () => {
 
           {/* Information on the Right */}
           <div className="w-full sm:w-1/2 text-center sm:text-left">
-            <h2 className="text-xl sm:text-2xl font-bold">{item.title}</h2>
+            <h2 className="text-xl sm:text-2xl font-bold">{item.name}</h2>
             <p className="text-gray-600 mt-2">{item.description}</p>
 
             <div className="mt-4 text-gray-600">

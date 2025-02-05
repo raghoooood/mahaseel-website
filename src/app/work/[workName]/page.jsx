@@ -50,7 +50,7 @@ const WorkDetail = () => {
     <div className="container py-12 px-4 mx-auto">
       {/* Title and Description */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900">{workItem.title}</h1>
+        <h1 className="text-4xl font-bold text-gray-900">{workItem.name}</h1>
         <p className="text-lg text-gray-700 mt-4 max-w-3xl mx-auto">{workItem.description}</p>
       </div>
 

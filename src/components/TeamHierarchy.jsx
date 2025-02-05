@@ -1,17 +1,17 @@
 import React from "react";
-import { samah } from "@/images/team";
+import { marwan, samah, walid } from "@/images/team";
 import Image from "next/image";
 
 const teamStructure = [
   {
     name: "Mr.Marwan al-Sayyah",
     position: "Owner",
-    image: "/images/john_doe.jpg",
+    image: marwan,
     children: [
       {
         name: "Walid Shekho",
         position: "Operation Manager",
-        image: "/images/jane_smith.jpg",
+        image: walid,
         children: [
           {
             name: "HR & Finance Team",
@@ -29,7 +29,7 @@ const teamStructure = [
             position: "Department",
             image: "/images/operations_team.jpg",
             children: [
-              { name: "Walid Shekho", position: "Companies Manager", image: "/images/chris_evans.jpg" },
+              { name: "Walid Shekho", position: "Companies Manager", image: walid },
               { name: "Samah Faek", position: "Companies Manager", image: samah },
             ],
           },
