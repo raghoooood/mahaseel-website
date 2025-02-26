@@ -95,7 +95,7 @@ export default function Home() {
       {/* Testimonials Section */}
       <Testimonials
         className="mt-24 sm:mt-32 lg:mt-40 px-6 sm:px-10 lg:px-16"
-        client={{ name: "Marwan Al Sayyah", logo: marwan }}
+        client={{ name: "Marwan Al Sayyah", logo: marwan , position: "Owner & Founder of Mahaseel Investment", }}
       >
         At Mahaseel, we focus on identifying high-growth opportunities and building businesses that thrive in dynamic markets. Through strategic investments and innovative management, we aim to create long-term value while driving excellence and fostering success across our diverse portfolio.
       </Testimonials>
