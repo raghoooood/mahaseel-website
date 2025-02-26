@@ -9,9 +9,11 @@ import React from "react";
 const ProcessPage = () => {
   return (
     <>
-      <PageIntro eyebrow="At Mahaseel Investment" title="Our mission is to">
+      <PageIntro eyebrow="Mahaseel Investment" title="WHO ARE WE? ">
         <p>
-        We believe in fostering growth by aligning with the evolving demands of modern markets and ensuring that each enterprise under our management becomes a leader in its respective industry.
+        At Mahaseel Investment, we believe in creating long-term value through strategic investments and exceptional management. 
+Since its inception in 2021, Mahaseel Investment has been celebrated as a dynamic and diversified investment company specializing in the investment and management of commercial enterprises. 
+
         </p>
       </PageIntro>
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
@@ -23,7 +25,7 @@ const ProcessPage = () => {
         <Deliver />
       </div>
       {/* Values */}
-      <Values />
+      {/* <Values /> */}
       <ContactSection />
     </>
   );

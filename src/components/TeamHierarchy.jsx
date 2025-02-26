@@ -1,38 +1,31 @@
 import React from "react";
-import { marwan, samah, walid } from "@/images/team";
+import { marwan, samah, walid, AhmadSaeid, kutaibaMhaish, mohammadEbrahim, NaseerAbubakar, HaideMelgar, ObaidaHammad, RaniPepitoBrizo, UsmanUmmar } from "@/images/team";
 import Image from "next/image";
 
 const teamStructure = [
   {
-    name: "Mr.Marwan al-Sayyah",
+    name: "Mr. Marwan al-Sayyah",
     position: "Owner",
     image: marwan,
     children: [
       {
-        name: "Walid Shekho",
-        position: "Operation Manager",
-        image: walid,
+        name: "Company managers",
+        position: "Department",
+        image: "/images/operations_team.jpg",
         children: [
-          {
-            name: "HR & Finance Team",
-            position: "Department",
-            image: "/images/hr_finance.jpg",
-            children: [
-              { name: "Usman Kuttoth", position: "HR Coordinator/PRO", image: "/images/michael_brown.jpg" },
-              { name: "Kutaiba Mhaish", position: "Senior Accountant", image: "/images/michael_brown.jpg" },
-              { name: "Ahmad Saied", position: "Accountant", image: "/images/emily_wilson.jpg" },
-              { name: "Obaida Hammad", position: "Accountant", image: "/images/emily_wilson.jpg" },
-            ],
-          },
-          {
-            name: "Operations Team",
-            position: "Department",
-            image: "/images/operations_team.jpg",
-            children: [
-              { name: "Walid Shekho", position: "Companies Manager", image: walid },
-              { name: "Samah Faek", position: "Companies Manager", image: samah },
-            ],
-          },
+          { name: "Walid Shekho", position: "Companies Manager", image: walid },
+          { name: "Samah Faek", position: "Companies Manager", image: samah },
+        ],
+      },
+      {
+        name: "HR & Finance Team",
+        position: "Department",
+        image: "/images/hr_finance.jpg",
+        children: [
+          { name: "Usman Kuttoth", position: "HR Coordinator/PRO", image: UsmanUmmar },
+          { name: "Kutaiba Mhaish", position: "Senior Accountant", image: kutaibaMhaish },
+          { name: "Ahmad Saied", position: "Accountant", image: AhmadSaeid },
+          { name: "Obaida Hammad", position: "Accountant", image: ObaidaHammad },
         ],
       },
     ],

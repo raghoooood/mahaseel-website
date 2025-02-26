@@ -4,7 +4,7 @@ import FadeIn from "./FadeIn";
 import Offices from "./Offices";
 import Border from "./Border";
 import Link from "next/link";
-import SocialMedia from "./SocialMedia";
+// import SocialMedia from "./SocialMedia";
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { PiPhoneDisconnectBold } from "react-icons/pi";
 
@@ -78,9 +78,10 @@ const ContactDetails = () => {
 
       {/* Social Media */}
       <Border className="mt-16 pt-16">
-        <h2 className="font-display text-lg font-semibold text-neutral-950">Follow Us</h2>
-        <SocialMedia className="mt-6" />
+        {/* <h2 className="font-display text-lg font-semibold text-neutral-950">Follow Us</h2> */}
+        {/* <SocialMedia className="mt-6" /> */}
       </Border>
+      
     </FadeIn>
   );
 };

@@ -15,10 +15,10 @@ export default function CatalogSwiperSection() {
         <div className="py-8 lg:py-28 px-14">
             <div className="container grid pb-8 lg:grid-cols-2">
                 <div className="text-left">
-                    <h1 className="py-4 text-4xl font-medium lg:text-6xl lg:py-0">Our Portfolio</h1>
+                    <h1 className="py-4 text-4xl font-medium lg:text-6xl lg:py-0 text-black ">Our Portfolio</h1>
                 </div>
                 <div>
-                    <h2 className="pb-6 text-xl font-bold tracking-wider">Hospitality Ventures</h2>
+                    <h2 className="pb-6 text-xl font-bold tracking-wider  text-black">Hospitality Ventures</h2>
                     <div className="grid grid-cols-2 text-gray-500 gap-x-8">
                         <div>
                             <p>Our robust portfolio represents a blend of innovation and operational efficiency</p>
@@ -26,7 +26,7 @@ export default function CatalogSwiperSection() {
                         <div>
                             <p>showcasing the breadth and depth of our investments</p>
                             <Link href="/work" className="inline-flex items-center pt-4 text-lg font-bold text-black underline">
-                                View Gallery <TbArrowUpRight />
+                                View All <TbArrowUpRight />
                             </Link>
                         </div>
                     </div>

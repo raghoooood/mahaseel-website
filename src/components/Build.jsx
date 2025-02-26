@@ -5,13 +5,11 @@ import Blockquote from "./Blockquote";
 
 const Build = () => {
   return (
-    <Section title="Leadership & Industries" image={{ src: imageLaptop, shape: 2 }}>
+    <Section title="Leadership" image={{ src: imageLaptop, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          At Mahaseel Investment, we focus on identifying high-growth opportunities 
-          and fostering businesses that thrive in dynamic markets. Our leadership team 
-          brings expertise in strategic investments, operational efficiency, and 
-          sustainable growth.
+        We are driven by innovation, excellence, and a sharp focus on creating value for all promising businesses. By partnering with enterprises that understand evolving market needs, we aim to foster growth and build resilient businesses that stand strong over time.
+
         </p>
 
         {/* Leadership Quotes */}

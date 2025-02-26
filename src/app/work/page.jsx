@@ -12,12 +12,11 @@ const WorkPage = () => {
             </div>
       <PageIntro
         eyebrow=""
-        title="Proven solutions for real-world problems."
+        title="Impactful solutions for real-world problems."
       >
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+                
+        We are committed to efficiency and smart resource management, ensuring maximum value for our clients.
         </p>
       </PageIntro>
 

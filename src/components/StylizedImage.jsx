@@ -26,7 +26,7 @@ const StylizedImage = ({ shape = 0, className, ...props }) => {
     <div
       className={clsx(
         className,
-        "relative flex aspect-[719/680] w-full "
+        "relative flex aspect-[619/680] w-full "
       )}
     >
       <svg viewBox={`0 0 ${width} ${height}`} fill="none" className="h-full">

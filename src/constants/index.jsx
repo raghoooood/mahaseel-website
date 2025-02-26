@@ -1,8 +1,8 @@
-import { SocialMediaProfiles } from "@/components/SocialMedia";
+// import { SocialMediaProfiles } from "@/components/SocialMedia";
 
 export const navigation = [
   {
-    title: "Work",
+    title: "Portfolio",
     links: [
       { title: "Midhatpasha", href: "/work/midhatpasha" },
       { title: "Sahalnoom", href: "/work/sahalnoom" },
@@ -24,8 +24,8 @@ export const navigation = [
       { title: "Contact us", href: "/contact" },
     ],
   },
-  {
-    title: "Connect",
-    links: SocialMediaProfiles,
-  },
+  // {
+  //   // title: "Connect",
+  //   // links: SocialMediaProfiles,
+  // },
 ];

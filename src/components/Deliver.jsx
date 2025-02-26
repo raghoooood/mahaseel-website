@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "./Section";
-import imageMeeting from "@/images/meeting.jpg";
+import imageMeeting from "../images/tower2.jpg";
 import List, { ListItem } from "./List";
 
 const Deliver = () => {

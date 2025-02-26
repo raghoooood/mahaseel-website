@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata = {
   title: {
     template: "mahaseel",
-    default: "mahaseel - Investing in businesses that shape tomorrow",
+    default: "mahaseel - Growth Starts Here",
   },
 };
 

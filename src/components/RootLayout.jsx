@@ -8,13 +8,13 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import Button from "./Button";
 import Offices from "./Offices";
-import SocialMedia from "./SocialMedia";
+// import SocialMedia from "./SocialMedia";
 import Footer from "./Footer";
 import Container from "./Container";
 import logo from '../images/clients/companies-png/logo.png';
 
 const NAV_LINKS = [
-  { name: "Our Work", href: "/work" },
+  { name: "Portfolio", href: "/work" },
   { name: "About Us", href: "/about" },
   { name: "Our Process", href: "/process" },
 ];
@@ -125,10 +125,10 @@ const RootLayoutInner = ({ children }) => {
                   <h2 className="text-base font-semibold text-white">Our office</h2>
                   <Offices className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2" />
                 </div>
-                <div className="sm:border-l sm:pl-16">
+                {/* <div className="sm:border-l sm:pl-16">
                   <h2 className="text-base font-semibold text-white">Follow us</h2>
                   <SocialMedia className="mt-6" />
-                </div>
+                </div> */}
               </div>
             </Container>
           </motion.div>
