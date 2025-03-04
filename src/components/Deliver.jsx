@@ -19,7 +19,7 @@ const Deliver = () => {
       </h3>
       <List>
         <ListItem title="Cafés & Restaurants">
-          Creating vibrant, welcoming spaces that offer exceptional service 
+         Creating vibrant, welcoming spaces that offer exceptional service 
           and unique culinary experiences.
         </ListItem>
         <ListItem title="Parking Services">

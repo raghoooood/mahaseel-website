@@ -13,8 +13,8 @@ const teamStructure = [
         position: "Department",
         image: "/images/operations_team.jpg",
         children: [
-          { name: "Walid Shekho", position: "Companies Manager", image: walid },
-          { name: "Samah Faek", position: "Companies Manager", image: samah },
+          { name: "Walid Shekho", position: "Company Manager", image: walid },
+          { name: "Samah Faek", position: "Company Manager", image: samah },
         ],
       },
       {
@@ -63,7 +63,6 @@ const renderTeam = (members, isRoot = false) => {
         {members.map((member, index) => (
           <div key={index} className="flex flex-col items-center">
             <TeamNode member={member} />
-            {member.children && <div className="w-1 h-6 md:h-8 bg-gray-400 mt-4 mb-6"></div>}
             {member.children && <div className="flex flex-wrap justify-center gap-4 md:gap-8">{renderTeam(member.children)}</div>}
           </div>
         ))}

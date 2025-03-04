@@ -16,13 +16,13 @@ const Build = () => {
         {/* Leadership Quotes */}
         <List>
         <ListItem title="Strategically invest">
-        in and manage commercial enterprises. 
+        in and manage commercial enterprises 
         </ListItem>
         <ListItem title="Drive operational">
-         excellence and profitability. 
+         excellence and profitability
         </ListItem>
         <ListItem title="Create long-term">
-        value for businesses and stakeholders alike.         </ListItem>
+        value for businesses and stakeholders alike        </ListItem>
       </List>
 
       

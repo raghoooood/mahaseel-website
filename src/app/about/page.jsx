@@ -32,8 +32,8 @@ const AboutPage = () => {
             <FadeIn className="max-w-[500px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[45rem] w-full overflow-hidden">
               <StylizedImage
                 src={tower1}
-                sizes="(min-width: 1024px) 31rem, 21rem"
-                className="w-full h-auto object-cover"
+                sizes="(min-width: 1024px) 31rem, 21rem "
+                className="w-full h-auto object-cover  "
               />
             </FadeIn>
           </div>

@@ -15,8 +15,8 @@ import logo from '../images/clients/companies-png/logo.png';
 
 const NAV_LINKS = [
   { name: "Portfolio", href: "/work" },
-  { name: "About Us", href: "/about" },
-  { name: "Our Process", href: "/process" },
+  { name: "Our Team", href: "/about" },
+  { name: "About Us", href: "/process" },
 ];
 
 const Header = ({ panelId, expanded, onToggle, toggleRef }) => {
