@@ -1,36 +1,20 @@
 import React from "react";
-import { marwan, samah, walid, AhmadSaeid, kutaibaMhaish, mohammadEbrahim, NaseerAbubakar, HaideMelgar, ObaidaHammad, RaniPepitoBrizo, UsmanUmmar } from "@/images/team";
+import { marwan, samah, walid, AhmadSaeid, kutaibaMhaish, ObaidaHammad, UsmanUmmar } from "@/images/team";
 import Image from "next/image";
 
-const teamStructure = [
-  {
-    name: "Mr. Marwan al-Sayyah",
-    position: "Owner",
-    image: marwan,
-    children: [
-      {
-        name: "Company managers",
-        position: "Department",
-        image: "/images/operations_team.jpg",
-        children: [
-          { name: "Walid Shekho", position: "Company Manager", image: walid },
-          { name: "Samah Faek", position: "Company Manager", image: samah },
-        ],
-      },
-      {
-        name: "HR & Finance Team",
-        position: "Department",
-        image: "/images/hr_finance.jpg",
-        children: [
-          { name: "Usman Kuttoth", position: "HR Coordinator/PRO", image: UsmanUmmar },
-          { name: "Kutaiba Mhaish", position: "Senior Accountant", image: kutaibaMhaish },
-          { name: "Ahmad Saied", position: "Accountant", image: AhmadSaeid },
-          { name: "Obaida Hammad", position: "Accountant", image: ObaidaHammad },
-        ],
-      },
-    ],
-  },
-];
+const teamStructure = {
+  owner: { name: "Mr. Marwan al-Sayyah", position: "Owner", image: marwan },
+  managers: [
+    { name: "Walid Shekho", position: "Company Manager", image: walid },
+    { name: "Samah Faek", position: "Company Manager", image: samah },
+  ],
+  employees: [
+    { name: "Usman Kuttoth", position: "HR Coordinator/PRO", image: UsmanUmmar },
+    { name: "Kutaiba Mhaish", position: "Senior Accountant", image: kutaibaMhaish },
+    { name: "Ahmad Saied", position: "Accountant", image: AhmadSaeid },
+    { name: "Obaida Hammad", position: "Accountant", image: ObaidaHammad },
+  ],
+};
 
 const TeamNode = ({ member }) => {
   return (
@@ -40,8 +24,8 @@ const TeamNode = ({ member }) => {
         <Image 
           src={member.image} 
           alt={member.name} 
-          height={144} // 36px * 4 for a 36px image
-          width={144}  // 36px * 4 for a 36px image
+          height={144} 
+          width={144}  
           className="w-full h-full object-cover" 
         />
       </div>
@@ -49,32 +33,31 @@ const TeamNode = ({ member }) => {
       {/* Name & Position */}
       <h3 className="text-sm md:text-lg font-semibold text-gray-800">{member.name}</h3>
       <p className="text-xs md:text-sm text-gray-600">{member.position}</p>
-
-      {/* Connector Line */}
-      {member.children && <div className="w-1 h-6 md:h-8 bg-gray-400 absolute bottom-[-12px]"></div>}
-    </div>
-  );
-};
-
-const renderTeam = (members, isRoot = false) => {
-  return (
-    <div className={`flex flex-col items-center ${isRoot ? "mt-4 md:mt-6" : "mt-8 md:mt-12"} space-y-6`}>
-      <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-        {members.map((member, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <TeamNode member={member} />
-            {member.children && <div className="flex flex-wrap justify-center gap-4 md:gap-8">{renderTeam(member.children)}</div>}
-          </div>
-        ))}
-      </div>
     </div>
   );
 };
 
 const TeamHierarchy = () => {
   return (
-    <div className="flex flex-col items-center space-y-4 md:space-y-6">
-      {renderTeam(teamStructure, true)}
+    <div className="flex flex-col items-center space-y-8 md:space-y-12">
+      {/* Owner */}
+      <div className="flex justify-center">
+        <TeamNode member={teamStructure.owner} />
+      </div>
+
+      {/* Managers */}
+      <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+        {teamStructure.managers.map((manager, index) => (
+          <TeamNode key={index} member={manager} />
+        ))}
+      </div>
+
+      {/* Employees */}
+      <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+        {teamStructure.employees.map((employee, index) => (
+          <TeamNode key={index} member={employee} />
+        ))}
+      </div>
     </div>
   );
 };

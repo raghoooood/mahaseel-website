@@ -1,7 +1,6 @@
 "use client";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import bg from '../images/bg-3.jpg';
 
 import { 
   abosayyah, 
@@ -10,7 +9,8 @@ import {
   mahasil, 
   medhatpasha, 
   parkmycar, 
-  sahalnoom 
+  sahalnoom ,
+  illustrate
 } from '../images/clients/companies-jpg';
 import { useEffect } from 'react';
 import gsap from 'gsap';
@@ -23,7 +23,8 @@ const clients = [
   mahasil,
   medhatpasha,
   parkmycar,
-  sahalnoom
+  sahalnoom,
+  illustrate
 ];
 
 const Clients = () => {

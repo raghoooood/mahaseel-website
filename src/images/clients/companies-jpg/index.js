@@ -5,6 +5,7 @@ import mahasil from './mahasil.jpg'
 import medhatpasha from './medhatpasha.jpg'
 import parkmycar from './parkmycar.jpg'
 import sahalnoom from './sah-alnoom.jpg'
+import illustrate from './illustrate.jpg'
 
 export{
     abosayyah,
@@ -13,5 +14,6 @@ export{
     mahasil,
     medhatpasha,
     parkmycar,
-    sahalnoom
+    sahalnoom,
+    illustrate
 }

@@ -7,7 +7,10 @@ import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import {
-    midhat1, midhat2, midhat3, sahalnoom1, sahalnoom2
+    abusayyah1,
+    abusayyah12, abusayyah5, esticana1,
+    esticana6,
+    midhat1, midhat2, midhat3, sahalnomexpres11, sahalnomexpres2, sahalnoom1, sahalnoom2
 } from '@/images/companies-images';
 
 export default function CatalogSwiperSection() {
@@ -45,7 +48,7 @@ export default function CatalogSwiperSection() {
                 speed={2000} // Controls smooth motion speed
                 modules={[Autoplay]}
             >
-                {[sahalnoom1, sahalnoom2, midhat1, midhat2, midhat3].map((image, index) => (
+                {[esticana6, sahalnomexpres11, abusayyah5, sahalnomexpres2, abusayyah1].map((image, index) => (
                     <SwiperSlide key={index} className="flex justify-center">
                         <div className="sm:w-[460px] h-[330px] w-[340px] ">
                             <Image

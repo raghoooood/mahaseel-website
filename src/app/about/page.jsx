@@ -48,13 +48,15 @@ const AboutPage = () => {
         </StatList>
       </Container> */}
 
-       {/* Catalog Swiper Section */}
-       <CatalogSwiperSection />
+   
       {/* Team Hierarchy Section */}
       <Container className="mt-16">
         <h2 className="text-3xl font-bold text-center mb-10 text-black">Meet Our Team</h2>
         <TeamHierarchy />
       </Container>
+
+          {/* Catalog Swiper Section */}
+          <CatalogSwiperSection />
 
       {/* Company Culture */}
       {/* <Cultures /> */}
